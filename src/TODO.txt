@@ -1,0 +1,25 @@
+dashboard
+Hey, a dashboard. Cool.
+Here we want to show exciting things today. You see a suggestion for the representation below.
+But it's up to you - next to each other, on top of each other or on the fly? Do whatever you think is cool - as long as you 
+manage to convince us that it really is ;-)
+first container: >> done
+    In the first container the 10 newest questions about "TypeScript" of Stackoverflow should be displayed.
+second container: >> done
+    In the second container he 10 newest questions on the topic "Angular2" of Stackoverflow should be displayed.
+    The "Angular2" tag should ring here at the latest.
+third container: >> done
+    In the third container the 5 newest questions on the topic "Weather" of Stackoverflow and 
+    5 arbitrary weather data from our weather data base are to be indicated. 
+    And in a list at the same time, but always alternating  - otherwise it would be boring.
+
+Pro-Tip 1: 
+    For the access to the Stackoverflow-Api there is a service available in the Repo, which you can use easily. 
+    But be careful: The Api only allows 300 requests per time window without authentication. 
+    If you need more, you either have to implement OAuth or just mock away a few answers for development. 
+Pro Tip 2: 
+    Think about the structure of the components. 
+    Which piece of code is responsible for what, what can be reused, and how can specific details be generalized?
+Pro tip 3: 
+    Please clone the repo (don't fork, otherwise everyone can see your solution ;-) and send us a link to your repo later.
+    This is the easiest way to track all commits and other changes.

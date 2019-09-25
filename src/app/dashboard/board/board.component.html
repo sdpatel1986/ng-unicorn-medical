@@ -1,0 +1,19 @@
+<div class=board>
+  <div *ngIf="!weatherData; else elseBlock">
+    <div *ngIf="!(questions | async)">
+      <div class="lds-dual-ring"></div>
+    </div>
+    <div *ngFor="let question of questions | async" class="content">
+      <app-display-stackoverflow [question]="question"></app-display-stackoverflow>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div *ngIf="!(questions | async)">
+      <div class="lds-dual-ring"></div>
+    </div>
+    <div *ngFor="let question of questions | async" class="content">
+      <app-display-stackoverflow [question]="question[0]"></app-display-stackoverflow>
+      <app-display-weatherdata [weatherData]="question[1]"></app-display-weatherdata>
+    </div>
+  </ng-template>
+</div>

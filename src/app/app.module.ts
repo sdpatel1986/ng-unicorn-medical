@@ -9,12 +9,18 @@ import {AppRoutingModule} from "./app.routing.module";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {LayoutModule} from "./core/layout/layout.module";
 import { SearchComponent } from './search/search.component';
+import { BoardComponent } from './dashboard/board/board.component';
+import { DisplayStackoverflowComponent } from './dashboard/board/display-stackoverflow/display-stackoverflow.component';
+import { DisplayWeatherdataComponent } from './dashboard/board/display-weatherdata/display-weatherdata.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    SearchComponent
+    SearchComponent,
+    BoardComponent,
+    DisplayStackoverflowComponent,
+    DisplayWeatherdataComponent
   ],
   imports: [
     BrowserModule,

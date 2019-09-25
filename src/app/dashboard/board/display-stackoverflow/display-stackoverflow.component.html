@@ -1,0 +1,37 @@
+<div>
+  <div class="stats">
+    <div class="votes">
+      <div class="count"><span>{{data.score}}</span></div>
+      <div>votes</div>
+    </div>
+    <div *ngIf="!data.answer_count; else answerBlock" class="answer">
+      <div class="count"><span>{{data.answer_count}}</span></div>
+      <div>answer</div>
+    </div>
+    <ng-template #answerBlock>
+    <div class="answer answered">
+      <div class="count"><span>{{data.answer_count}}</span></div>
+      <div>answer</div>
+    </div>
+    </ng-template>
+    <div class="views">
+      <div class="count"><span>{{data.view_count}}</span></div>
+      <div>views</div>
+    </div>
+  </div>
+  <div class="summary">
+    <h3><a href='{{data.link}}'>{{data.title}}</a></h3>
+    <div class="tags">
+      <span *ngFor="let tag of data.tags">
+        {{tag}}
+      </span>
+    </div>
+    <div class="timeline">
+      <a href='{{data.link}}'>
+        <span>{{displayDate(data.last_activity_date, data.creation_date, data.last_edit_date)}}</span>
+      </a>
+      <a href='https://stackoverflow.com/users/{{data.owner.user_id}}/{{data.owner.display_name}}'>{{data.owner.display_name}}</a>
+      <span>{{data.owner.reputation}}</span>
+    </div>
+  </div>
+</div>

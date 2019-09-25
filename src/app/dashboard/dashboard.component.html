@@ -1,3 +1,5 @@
-<p>
-  Dashboard Komponente...
-</p>
+<div id="boardcontainer">
+  <div *ngFor="let feed of boardFeed">
+      <app-board [feed]="feed"></app-board>
+  </div>
+</div>
