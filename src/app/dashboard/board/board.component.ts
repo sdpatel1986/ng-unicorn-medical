@@ -22,7 +22,7 @@ export class BoardComponent implements OnInit {
       this.weatherData = true;
       this.questions = this.searchService.search(this.feed[0])
       .pipe(
-        map((q: any) => q.items.slice(0, 5).map((x: any[]) => [x].concat(this.feed[1][Math.ceil(Math.random()*this.feed[1].length)]))),
+        map((q: any) => q.items.slice(0, 5).map((x: any[]) => [x].concat(this.feed[1][Math.floor(Math.random()*this.feed[1].length)]))),
       );
     } else {
       this.questions = this.searchService.search(this.feed[0])
